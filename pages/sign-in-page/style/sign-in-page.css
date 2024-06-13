@@ -1,3 +1,21 @@
 .margin-top{
-    margin-top: 15vh;
+    margin-top: 5vh;
+}
+
+body{
+    background-image: url(/images/demo/gallery/signin.jpg);
+}
+
+.background{
+    background: rgba(44, 44, 44, 0.9);
+    height: 70vh;
+}
+
+.navbar-background{
+    background: rgba(255, 255, 255, 0.5) !important;
+    color: rgb(255, 255, 255);
+}
+
+.nav-item:hover{
+    background: rgba(0, 0, 0, 0.5);
 }
