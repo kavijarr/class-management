@@ -1,0 +1,201 @@
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+.logo-pcc {
+    width: 1000px;
+}
+
+.gal-img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: clamp(1rem, 0.8750rem + 0.6250vw, 1.5rem);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.gal {
+    display: grid;
+    grid-template-columns: 25% 30% 15% 25%;
+    gap: 15px;
+    place-content: center;
+    grid-template-rows: 50% 50%;
+    height: 80vh;
+    min-height: 460px;
+    padding: max(2vh, 1.5rem);
+    @include mQ(690px) {
+        height: 65vh;
+    }
+    @include mQ(470px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 35%);
+    }
+    .card-gal {
+        border-radius: 25px;
+        box-shadow: -2px 4px 15px rgb(0 0 0 / 26%);
+        @include mQ(470px) {
+            grid-column: span 1;
+        }
+        &:nth-child(2) {
+            grid-column: 2/3;
+            grid-row: span 2;
+            @include mQ(690px) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+        &:nth-child(3) {
+            grid-column: span 2;
+            @include mQ(690px) {
+                grid-column: 2/4;
+                grid-row: 1/2;
+            }
+        }
+        @include mQ(690px) {
+            &:nth-child(6) {
+                grid-column: 2/4;
+                grid-row: 2/3;
+            }
+        }
+        @include mQ(470px) {
+            &:nth-child(5) {
+                grid-column: span 2;
+            }
+        }
+        p {
+            font-size: clamp(0.9rem, 0.8750rem + 0.1250vw, 1rem);
+            line-height: 1.4;
+        }
+        .gal-img {
+            border-radius: 25px;
+        }
+        .card__img {
+            position: relative;
+            height: 100%;
+            .card__overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                color: #fff;
+                padding: clamp(0.938rem, 5vw, 1.563rem);
+                background: rgb(2, 2, 46);
+                background: linear-gradient(0deg, rgb(0 0 0 / 57%) 0%, rgb(255 255 255 / 0%) 100%);
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+            }
+            span {
+                position: absolute;
+                top: 25px;
+                left: min(2vmax, 1.563rem);
+                color: #ff7b29;
+                background: #fff;
+                border-radius: 50px;
+                padding: 2px 8px 2px 6px;
+                display: flex;
+                box-shadow: 0px 1px 20px #0000002b;
+                @include mQ(690px) {
+                    top: 20px;
+                }
+                @include mQ(470px) {
+                    top: 15px;
+                }
+                svg {
+                    fill: #ff7b29;
+                    width: 20px;
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+}
