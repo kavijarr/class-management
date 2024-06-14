@@ -8,13 +8,17 @@
 
 .dashboard-color{
     background-color: rgb(233, 231, 231);
-    height: 70vh;
+    /* height: 80vh; */
 }
 
 .margin-top{
-    margin-top: 10vh;
+    margin-top: 6vh;
 }
 
 body{
     background-image: url(/images/demo/gallery/management.jpg);
+}
+
+.btn-margin{
+    margin-top: 6vh;
 }
