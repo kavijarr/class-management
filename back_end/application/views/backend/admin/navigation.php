@@ -350,29 +350,10 @@
                         </a>
                     </li>
 
-  
-
-                    <li class="<?php if ($page_name == 'sms_settings') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>smssetting/sms_settings">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('manage_sms_api'); ?></span>
-                        </a>
-                    </li>
-
-
-
                     <li class="<?php if ($page_name == 'manage_language') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>admin/manage_language">
                         <i class="fa fa-angle-double-right p-r-10"></i>
                              <span class="hide-menu"><?php echo get_phrase('manage_language'); ?></span>
-                        </a>
-                    </li>
-
-
-                    <li class="<?php if ($page_name == 'paymentSetting') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>payment/paymentSetting">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('Payment Settings'); ?></span>
                         </a>
                     </li>
      
@@ -382,14 +363,7 @@
                 
         <li> <a href="#" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-bar-chart-o p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('generate_reports');?><span class="fa arrow"></span></span></a>
         
-                        <ul class=" nav nav-second-level">  
-   
-                <li class="<?php if ($page_name == 'studentPaymentReport') echo 'active'; ?>">
-                        <a href="<?php echo base_url(); ?>report/studentPaymentReport">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                           <span class="hide-menu"><?php echo get_phrase('Student Payments'); ?></span>
-                        </a>
-                </li>
+                        <ul class=" nav nav-second-level">
 
                 
                 <li class="<?php if ($page_name == 'classAttendanceReport') echo 'active'; ?> ">

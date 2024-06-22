@@ -70,15 +70,6 @@
                         <span class="hide-menu"><?php echo get_phrase('Teacher'); ?></span>
                     </a>
                 </li>
-
-                    
-                <li class="<?php if ($page_name == 'class_mate') echo 'active'; ?> ">
-                    <a href="<?php echo base_url(); ?>student/class_mate">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                            <span class="hide-menu"><?php echo get_phrase('Class Mate'); ?></span>
-                    </a>
-                </li>
-
                     
                 <li class="<?php if ($page_name == 'assignment') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>assignment/assignment">
