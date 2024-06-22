@@ -414,15 +414,6 @@
                              <span class="hide-menu"><?php echo get_phrase('Attendance Report'); ?></span>
                         </a>
                 </li>
-                
-                <li class="<?php if ($page_name == 'examMarkReport') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>report/examMarkReport">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('Exam Mark Report'); ?></span>
-                        </a>
-                </li>
-
-     
                  </ul>
                 </li>
 

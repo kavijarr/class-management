@@ -96,44 +96,9 @@
                         <span class="hide-menu"><?php echo get_phrase('view_attendance'); ?></span>
                     </a>
                 </li>
-
-
         </ul>
     </li>
-
-    <li> <a href="#" class="waves-effect"><i data-icon="&#xe006;" class="fa fa-bar-chart-o p-r-10"></i> <span class="hide-menu"><?php echo get_phrase('student_scores');?><span class="fa arrow"></span></span></a>
-        
-        <ul class=" nav nav-second-level<?php
-            if ($page_name == 'marks' ||
-                    $page_name == 'exam_marks_sms'||
-                    $page_name == 'tabulation_sheet')
-                echo 'opened active';
-            ?>">
-
-        <?php $select_role = $this->db->get_where('teacher', array('teacher_id' => $this->session->userdata('teacher_id')))->row()->role;?>
-        <?php if($select_role == '1'):?>
-                    <li class="<?php if ($page_name == 'marks') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>teacher/marks">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                           <span class="hide-menu"><?php echo get_phrase('class_teacher'); ?></span>
-                        </a>
-                    </li>
-        <?php endif;?>
-        
-        <?php $select_role = $this->db->get_where('teacher', array('teacher_id' => $this->session->userdata('teacher_id')))->row()->role;?>
-        <?php if($select_role == '2'):?>
-                    <li class="<?php if ($page_name == 'student_marksheet_subject') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>teacher/student_marksheet_subject">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                           <span class="hide-menu"><?php echo get_phrase('subject_teacher'); ?></span>
-                        </a>
-                    </li>
-        <?php endif;?>
-     
-        </ul>
-    </li>
-                        
-                                
+                       
             <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
                 <a href="<?php echo base_url(); ?>teacher/manage_profile">
                     <i class="fa fa-gears p-r-10"></i>
