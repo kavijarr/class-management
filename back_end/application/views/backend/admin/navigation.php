@@ -60,22 +60,6 @@
                     $page_name == 'circular'||
                     $page_name == 'academic_syllabus') echo 'opened active';
             ?> ">
-                            
-        <li class="<?php if ($page_name == 'enquiry_category') echo 'active';?>"> 
-
-            <a href="<?php echo base_url();?>admin/enquiry_category">
-                <i class="fa fa-angle-double-right p-r-10"></i>
-                <span class="hide-menu"><?php echo get_phrase('Equiry Category');?></span>
-
-            </a> 
-        </li>
-
-       <li class="<?php if ($page_name == 'enquiry') echo 'active'; ?> ">
-                <a href="<?php echo base_url(); ?>admin/list_enquiry">
-                <i class="fa fa-angle-double-right p-r-10"></i>
-                      <span class="hide-menu"><?php echo get_phrase('list_enquiries'); ?></span>
-                </a>
-        </li>
 
         <li class="<?php if ($page_name == 'club') echo 'active'; ?>">
                 <a href="<?php echo base_url(); ?>admin/club">
