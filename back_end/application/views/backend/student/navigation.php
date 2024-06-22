@@ -98,21 +98,7 @@
  
  
          </ul>
-    </li>
-
-            <li class="<?php if ($page_name == 'invoice') echo 'active'; ?> ">
-                <a href="<?php echo base_url(); ?>student/invoice">
-                    <i class="fa fa-paypal p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('Invoice'); ?></span>
-                </a>
-            </li> 
-
-        <li class="<?php if ($page_name == 'payment_history') echo 'active'; ?> ">
-                <a href="<?php echo base_url(); ?>student/payment_history">
-                    <i class="fa fa-credit-card p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('Payment History'); ?></span>
-                </a>
-        </li>               
+    </li>     
                                 
             <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
                 <a href="<?php echo base_url(); ?>student/manage_profile">
