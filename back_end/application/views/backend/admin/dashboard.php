@@ -44,45 +44,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="white-box">
-                            <div class="r-icon-stats">
-                                <i class="ti-money bg-megna"></i>
-                                <div class="bodystate">
-                                <?php 
-                                $this->db->select_sum('amount');
-                                $this->db->from('payment');
-                                $this->db->where('payment_type', 'expense');
-                                $query = $this->db->get();
-                                $expense_amount = $query->row()->amount;
-                                ?>
-                                    <h4><?php echo $this->db->get_where('settings', array('type' => 'currency'))->row()->description;?> <?php echo $expense_amount;?></h4>
-                                    <span class="text-muted"><?php echo get_phrase('Expense');?></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="white-box">
-                            <div class="r-icon-stats">
-                                <i class="ti-money bg-info"></i>
-                                <div class="bodystate">
-
-                                <?php 
-                                $this->db->select_sum('amount');
-                                $this->db->from('payment');
-                                $this->db->where('payment_type', 'income');
-                                $query = $this->db->get();
-                                $income_amount = $query->row()->amount; ?>
-                                    <h4>
-                                    <?php echo $this->db->get_where('settings', array('type' => 'currency'))->row()->description;?> <?php echo $income_amount;?>
-                                    </h4>
-                                    <span class="text-muted"><?php echo get_phrase('Income');?></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-md-3 col-sm-6">
                         <div class="white-box">
                             <div class="r-icon-stats">
