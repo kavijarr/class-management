@@ -81,51 +81,7 @@
                                 </style>
 
                                 <!-- Chart code -->
-                                <script>
-                                am4core.ready(function() {
-
-                                // Themes begin
-                                am4core.useTheme(am4themes_animated);
-                                // Themes end
-
-                                // Create chart instance
-                                var chart = am4core.create("chartdiv1", am4charts.PieChart);
-
-                                // Add data
-                                chart.data = [
-                    
-                    <?php $selects = $this->db->get('attendance')->result_array(); //$this->crud_model->get_invoice_info();
-                            foreach ($selects as $key => $select):?>
-
-                                {
-                                "country": "<?php echo $this->crud_model->get_type_name_by_id('student', $select['student_id']);?>",
-                                "litres": <?= $this->db->get_where('student', array('student_id' => $select['student_id']))->num_rows();?>
-                                }, 
-                    <?php endforeach;?>
                                 
-                                ];
-
-                                // Add and configure Series
-                                var pieSeries = chart.series.push(new am4charts.PieSeries());
-                                pieSeries.dataFields.value = "litres";
-                                pieSeries.dataFields.category = "country";
-                                pieSeries.innerRadius = am4core.percent(50);
-                                pieSeries.ticks.template.disabled = true;
-                                pieSeries.labels.template.disabled = true;
-
-                                var rgm = new am4core.RadialGradientModifier();
-                                rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.5);
-                                pieSeries.slices.template.fillModifier = rgm;
-                                pieSeries.slices.template.strokeModifier = rgm;
-                                pieSeries.slices.template.strokeOpacity = 0.4;
-                                pieSeries.slices.template.strokeWidth = 0;
-
-                                chart.legend = new am4charts.Legend();
-                                chart.legend.position = "right";
-
-                                }); // end am4core.ready()
-                                </script>
-
                                 <!-- HTML -->
                                 <div id="chartdiv1"></div>
 
