@@ -162,14 +162,6 @@
                               <span class="hide-menu"><?php echo get_phrase('list_students'); ?></span>
                         </a>
                     </li>
-
-
-    <li class="<?php if ($page_name == 'studentCategory') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>studentcategory/studentCategory">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('Student Categories'); ?></span>
-                        </a>
-     </li>
      
      <li class="<?php if ($page_name == 'studentHouse') echo 'active'; ?> ">
                         <a href="<?php echo base_url(); ?>studenthouse/studentHouse">
@@ -184,15 +176,7 @@
                              <span class="hide-menu"><?php echo get_phrase('Student Activity'); ?></span>
                         </a>
      </li>
-     
-     <li class="<?php if ($page_name == 'socialCategory') echo 'active'; ?> ">
-                        <a href="<?php echo base_url(); ?>socialcategory/socialCategory">
-                        <i class="fa fa-angle-double-right p-r-10"></i>
-                             <span class="hide-menu"><?php echo get_phrase('Social Category'); ?></span>
-                        </a>
-     </li>
-        
-     
+          
                  </ul>
     </li>
     <?php endif;?> <!---  Permission for Admin Manage Student ends here ------>
