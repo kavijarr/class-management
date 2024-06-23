@@ -97,15 +97,7 @@
              
  
          </ul>
-    </li>
-
-            <li class="<?php if ($page_name == 'invoice') echo 'active'; ?> ">
-                <a href="<?php echo base_url(); ?>parents/invoice">
-                    <i class="fa fa-paypal p-r-10"></i>
-                        <span class="hide-menu"><?php echo get_phrase('Invoice'); ?></span>
-                </a>
-            </li>              
-                                
+    </li>                              
             <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
                 <a href="<?php echo base_url(); ?>parents/manage_profile">
                     <i class="fa fa-gears p-r-10"></i>
