@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-3 col-sm-6">
                         <div class="white-box">
                             <div class="r-icon-stats">
@@ -312,7 +312,6 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-
                                             <th>Image</th>
                                             <th>Name</th>
                                             <th>Email</th>
